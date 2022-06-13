@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <title>registro cancion</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <link th:href="@{https://fonts.googleapis.com/css?family=Poppins:600&display=swap}" rel="stylesheet">
+    <script th:src="@{https://kit.fontawesome.com/a81368914c.js}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" th:href="@{/img/favicon.png}">
+</head>
+
+<body>
+    <img class="wave" th:src="@{/img/wave.png}">
+    <div class="container">
+        <div class="img">
+            <img th:src="@{/img/1428749.svg}">
+        </div>
+        <div class="login-content">
+            <form th:action="@{/cancion/add}" th:object="${cancion}" method="post">
+                <img th:src="@{/img/avatar.svg}">
+
+                <h2 class="title" th:text="${accion}"></h2>
+
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Nombre Cancion</h5>
+                        <input type="text" class="input" id="nombre_Cancion" th:field="*{nombre_Cancion}">
+                    </div>
+                </div>
+
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Fecha Grabacion</h5>
+                        <input type="text" class="input" id="fecha_Grabacion" th:field="*{fecha_Grabacion}">
+                    </div>
+                </div>
+
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Duracion Cancion</h5>
+                        <input type="text" class="input" id="duracion_Cancion" th:field="*{duracion_Cancion}">
+                    </div>
+                </div>
+
+
+                <div class="input-div pass">
+                    <div class="div">
+                        <h5 style="margin-left: 20px;">Estado</h5>
+                        <input type="checkbox" name="estado_Genero" checked style="margin-right: 15px;" id="estado_Cancion" th:field="*{estado_Cancion}">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

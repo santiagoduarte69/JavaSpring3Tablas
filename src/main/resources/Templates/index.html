@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/styleindex.css}">
+    <link rel="icon" th:href="@{/img/favicon.png}">
+    <title>DiscVss - Pagina principal</title>
+</head>
+
+<body>
+    <header>
+        <div class="sContainer">
+            <div class="s1"></div>
+            <div class="s2"></div>
+            <div class="s3"></div>
+        </div>
+        <div class="webContainer">
+            <nav>
+                <div class="logo">
+                    <p>DiscVss</p>
+                </div>
+                <div class="menu">
+                    <a th:href="@{/genero/listar}" class="menu_link">Listar Genero</a>
+                    <a th:href="@{/genero/formgenero}" class="menu_link">Registar Genero</a>
+                    <a th:href="@{disquera/listar}" class="menu_link">Listar disquera</a>
+                    <a th:href="@{disquera/form}" class="menu_link">Registrar disquera</a>
+                    <a th:href="@{cancion/listar}" class="menu_link">Listar cancion</a>
+                    <a th:href="@{cancion/form}" class="menu_link">Registrar cancion</a>
+                </div>
+            </nav>
+
+            <div class="app_wrap">
+                <h2>DiscVss
+                    <span class="diffText">Registra o lista</span> tu genero<br> <span>Musical</span> aqui
+                </h2>
+                <p class="SText">Con mucha facilidad <span>Crearas</span> lo que te permitas</p>
+                <div class="app_btn">
+                    <button class="primaryBtn"><a href="#"></a>Crear genero</a></button>
+                    <button class="accBtn">listar genero</button>
+                </div>
+            </div>
+
+            <div class="imgBox">
+                <img src="resources/image/guit.png" id="img1">
+            </div>
+
+            <div class="square"></div>
+        </div>
+    </header>
+</body>
+
+</html>
